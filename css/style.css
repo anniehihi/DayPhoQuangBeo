@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #950715;
+  background-color: #90681e;
 
   /* Because we want header to be sticky later */
   height: 9.6rem;
@@ -515,7 +515,7 @@
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
 
-  background-image: linear-gradient(to right bottom, #950715, #950715);
+  background-image: linear-gradient(to right bottom, #90681e, #90681e);
   overflow: hidden;
 }
 
@@ -536,7 +536,7 @@
 }
 
 .cta-img-box {
-  background-image: url("../img/avt\ -\ Copy.jpg");
+  background-image: url("../img/quangbeo01\ \(1\).jpg");
   background-size: cover;
   /* background-position: center; */
   background-position: center;
