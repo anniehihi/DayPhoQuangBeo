@@ -44,6 +44,10 @@
     </script>
   </head>
   <body>
+    <div id="loading-overlay">
+      <div class="loader"></div>
+    </div>
+
     <header class="header">
       <a href="./index.html ">
         <img class="logo" alt="Logo QuangBeo logo" src="/img/logo-beo.jpg" />
@@ -259,33 +263,29 @@
     </footer>
     <script>
       var form = document.getElementById("sign-up");
+      var loadingOverlay = document.getElementById("loading-overlay");
+
       form.addEventListener("submit", (e) => {
         e.preventDefault();
+
+        // Hiển thị hiệu ứng load
+        loadingOverlay.style.visibility = "visible";
+        loadingOverlay.style.opacity = 1;
+
         fetch(form.action, {
           method: "POST",
           body: new FormData(document.getElementById("sign-up")),
         })
           .then((response) => response.json())
           .then((html) => {
-            // you can put any JS code here
-            // window.open("zalo.html", "_blank");
+            // Ẩn hiệu ứng load sau khi dữ liệu được xử lý
+            loadingOverlay.style.visibility = "hidden";
+            loadingOverlay.style.opacity = 0;
+
+            // Các xử lý tiếp theo
             window.location.assign("zalo.html");
           });
       });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XELSJRH050"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-XELSJRH050");
     </script>
   </body>
 </html>
